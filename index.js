@@ -19,18 +19,6 @@ app.get('/', function(req, res){
     res.render('home');
 });
 
-app.post('/buy', function(req, res){
-    
-});
-
-app.post('/set-price', function(req, res){
-    
-});
-
-app.post('/clear', function(req, res){
-    
-});
-
 app.listen(3010, function(){
     console.log("started on: ", this.address().port);
 })
