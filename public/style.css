@@ -5,7 +5,7 @@ body {
 input[type=text] {
     margin : 0.5em;
     padding: 0.5em;
-    width: 5em;
+    width: 10em;
 }
 
 input[type=submit] {
@@ -16,4 +16,9 @@ input[type=submit] {
 .container {
     width: 60%;
     margin: auto;
+}
+
+.label {
+    width: 7.5em;
+    font-weight: bold;
 }

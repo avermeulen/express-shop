@@ -3,14 +3,14 @@
     <h1>Express starter - shop</h1>
 
     <div>
-        <div>Total bought : {{grandTotal}}</div>
-        <div>Current price : {{currentPrice}}</div>
+        <div><span class="label">Total bought:</span> </div>
+        <div><span class="label">Current price:</span></div>
     </div>
 
     <div>
         <h1>Buy</h1>
         <form action="/buy" method="post">
-            <input type="text" name="qty" placeholder="Buy how many" value="{{qty}}">
+            <input type="text" name="qty" placeholder="Buy how many" value="">
             <input type="submit" value="Buy">
         </form>
     </div>
@@ -18,7 +18,7 @@
     <div>
         <h1>Set price</h1>
         <form action="/set-price" method="POST">
-            <input type="text" name="price" placeholder="price" value="{{currentPrice}}">
+            <input type="text" name="price" placeholder="price" value="">
             <input type="submit" value="Set price">
         </form>
     </div>
