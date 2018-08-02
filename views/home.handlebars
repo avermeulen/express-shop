@@ -1,1 +1,32 @@
-<h1>Express starter</h1>
+<div class="container">
+
+    <h1>Express starter - shop</h1>
+
+    <div>
+        <div>Total bought : {{grandTotal}}</div>
+        <div>Current price : {{currentPrice}}</div>
+    </div>
+
+    <div>
+        <h1>Buy</h1>
+        <form action="/buy" method="post">
+            <input type="text" name="qty" placeholder="Buy how many" value="{{qty}}">
+            <input type="submit" value="Buy">
+        </form>
+    </div>
+
+    <div>
+        <h1>Set price</h1>
+        <form action="/set-price" method="POST">
+            <input type="text" name="price" placeholder="price" value="{{currentPrice}}">
+            <input type="submit" value="Set price">
+        </form>
+    </div>
+
+    <div>
+        <form action="/clear" method="post">
+            <input type="submit" value="Clear">
+        </form>
+    </div>
+
+</div>
