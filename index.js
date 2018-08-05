@@ -3,9 +3,9 @@ const express = require('express');
 const app = express();
 const exphbs  = require('express-handlebars');
 const bodyParser = require('body-parser');
+const Shop = require('./shop');
 
-let currentPrice = 0;
-let grandTotal = 0;
+const shop = Shop();
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
@@ -19,21 +19,18 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.get('/', function(req, res){
-    res.render('home', {
-        currentPrice,
-        grandTotal
-    });
+    res.render('home', shop.settings());
 });
 
 app.post('/set-price', function(req, res){
     let price = req.body.price;
-    currentPrice = price;
+    shop.setPrice(price);
     res.redirect('/');
 });
 
 app.post('/buy', function(req, res){
     let qty = req.body.qty;
-    grandTotal += (currentPrice * qty);
+    shop.buy(qty);
     res.redirect('/');
 });
 
