@@ -3,7 +3,7 @@
     <h1>Express shop</h1>
 
     <div>
-        <div><span class="label">Total bought:</span> </div>
+        <div><span class="label">Total bought:</span> {{grandTotal}} </div>
     </div>
 
     <div>
@@ -17,7 +17,7 @@
     <div>
         <h1>Set price</h1>
         <form action="/set-price" method="POST">
-            <input type="text" name="price" placeholder="price" value="">
+            <input type="text" name="price" placeholder="price" value="{{currentPrice}}">
             <input type="submit" value="Set price">
         </form>
     </div>
