@@ -2,24 +2,24 @@ module.exports = function () {
     let currentPrice = 0;
     let grandTotal = 0;
 
-    function buy(qty) {
+    function buy (qty) {
         grandTotal += (currentPrice * qty);
     }
 
-    function setPrice(price){
+    function setPrice (price) {
         currentPrice = price;
     }
 
-    function settings(){
+    function settings () {
         return {
             currentPrice,
             grandTotal
-        }
+        };
     }
 
     return {
         setPrice,
         buy,
         settings
-    }
-}
+    };
+};
